@@ -1,0 +1,24 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>clearTimeout in js</title>
+ </head>
+ <script type="text/javascript">
+ 	var hi;
+ 	function start(){
+ 		  hi=settimeout(
+ 		 	function(){
+                     document.write("hi how are you");
+ 		},5000)}
+
+ function stop(){
+ clearTimeout('hi');
+}
+ </script>
+ <body>
+ <button onclick="start()">start</button>
+ <button onclick="stop()">stop</button>
+ </body>
+ </html>

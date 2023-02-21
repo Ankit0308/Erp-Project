@@ -1,0 +1,101 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SabinfotechLogin.aspx.cs" Inherits="SABCloudReport.SabinfotechLogin" %>
+
+<%@ Register Assembly="DevExpress.Web.v18.2, Version=18.2.17.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web" TagPrefix="dx" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+            <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+        <title>SABinfotech CloudERP</title>
+        <meta name="keywords" content="textiles,erp,software,fabrics,garments,process house,dyeing house,No  1 Erp,texttiles ERP,textiles software,big budget erp ,gst accounting,e-invoice,ewaybill" />
+        <meta name="description" content="Formerly known as ABS Computers established in the Year 1992, SAB INFOTECH SOLUTIONS PRIVATE LIMITED is a market leader in ERP and General Accounting Software for G.S.T. Catering to a range of Clients from Industrial Units to Local traders, we have a created a niche market in a Textile, Gold and Diamond Sector. Customising Software as per the customers needs of varied sectors viz. Textiles, Diamond, Gold, Imitation Jewellery, Petrochemicals, Oil, Pharma, Shipping etc. Its a long journey of 26 years with more than 1500 clients based out of MUMBAI and other part of Country  , we are still growing rapidly.">
+        <meta name="author" content="SABinfotech.com">
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="sabimg/favicon.ico"/>
+
+        <!-- Mobile Metas -->
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <!-- Web Fonts  -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CShadows+Into+Light" rel="stylesheet" type="text/css">
+
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<script src="js/jquery-1.4.1.min.js" type="text/javascript"></script>
+<script src="js/jquery.jcarousel.pack.js" type="text/javascript"></script>
+<link href="css/ReportCss.css" rel="stylesheet" />
+<script src="js/jquery-func.js" type="text/javascript"></script>
+
+    
+<style>
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.full-height {
+  height: 100%;
+  background: yellow;
+}
+</style>
+
+</head>
+
+<body>
+    <header >
+        <img src="sabimg/sabinfotecherp.png" height="50" width="50" />
+        
+        <h1>SAB Infotech Cloud Erp Reporting Login</h1>
+        <link href="css/SabErpcss.css" rel="stylesheet" />
+    </header>
+    
+    <main>
+        <form runat="server"  id="login_form" class="form_class" >
+            <div class="fddorm_div">
+
+                <div id="#examplsse1">
+
+
+                <asp:Panel ID="LoginPan" runat="server">
+
+                <asp:Panel ID="Panel1" runat="server">
+                <label>Cloud Email Id:</label>
+                <input type="email" runat="server" name="SabRegEmail" id="SabRegEmail" placeholder="">
+                    <br />
+
+                <label>Telegram User:</label>
+                <input type="text" runat="server" name="txtUsername" id="txtUsername" Width="130px" placeholder="TeleGramId">
+                                        <br />
+                <asp:Button ID="Button1" class="submit_class" runat="server" Text="Button" OnClick="BtnTel_Click" />
+
+                </asp:Panel>
+                 <asp:Panel ID="Panel2" Visible="false"  runat="server">
+                 <label>Telegram OTP:</label>
+                 <input type="Password" runat="server" name="Psw" id="Psw" placeholder="password">
+                 <asp:Button ID="Button2" class="submit_class" runat="server" Text="Button" OnClick="Button1_Click" />
+                </asp:Panel>
+
+                </asp:Panel>
+
+
+
+                 <asp:Panel ID="CompanyPan" Visible="false"  runat="server">
+                <label>Company:</label>
+                <dx:ASPxGridLookup ID="TxtCompany" runat="server" Width="60%" TextFormatString="{0}" KeyFieldName="pid" IncrementalFilteringMode="Contains"></dx:ASPxGridLookup>
+                <label>Accounting Year:</label>
+                <dx:ASPxGridLookup ID="TxtYear" runat="server" KeyFieldName="yycode" Width="60%"  TextFormatString="{0}" SelectionMode="Single" IncrementalFilteringMode="Contains"></dx:ASPxGridLookup>
+                <asp:Button ID="Button3" class="submit_class" runat="server" Text="Button" OnClick="Button2_Click" Width="121px" />
+                </asp:Panel>
+
+                                </div>
+            </div>
+            <div class="info_div">
+                <p>Creating Possibilities From Probabilities</p>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p>Developed By  <a href="#">Sab infotech&trade;</a></p>
+    </footer>
+</body>
